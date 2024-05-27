@@ -3,6 +3,7 @@ const mongoose=require("mongoose")
 const cors=require("cors")
 const bodyParser = require("body-parser");
 const user=require("./routes/user");
+const admin=require("./routes/admin");
 // const banners=require("./routes/banners");
 // const bookings=require("./routes/bookings");
 // const admin=require("./routes/admin");
@@ -29,6 +30,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use("/api/v1",user)
+app.use("/api/v1",admin)
 // app.use("/api/v1",bookings)
 // app.use("/api/v1",admin)
 // app.use("/api/v1",category)
